@@ -72,5 +72,10 @@
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
 
+;bookmark
+(global-set-key (kbd "C-h C-j l") 'helm-filtered-bookmarks)
+(global-set-key (kbd "C-h C-j a") 'bookmark-set)
+
+
 
 (provide 'init-keybindings)

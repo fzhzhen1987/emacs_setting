@@ -53,3 +53,18 @@
 
 
 
+
+;下面的设置必须在加载helm-gtags
+
+(require 'setup-helm)
+(require 'setup-helm-gtags)
+(require 'helm-projectile)
+
+
+
+;(helm-projectile-on)
+(setq projectile-completion-system 'helm)
+(setq projectile-indexing-method 'alien)
+
+(global-set-key (kbd "C-h C-b") 'helm-resume)
+
