@@ -34,10 +34,11 @@
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-x C-b") 'helm-mini)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
-(global-set-key (kbd "C-c h o") 'helm-occur)
+(global-set-key (kbd "C-r") 'helm-occur)
+(global-set-key (kbd "C-h C-b") 'helm-resume)
 
 (global-set-key (kbd "C-c h C-c w") 'helm-wikipedia-suggest)
 
