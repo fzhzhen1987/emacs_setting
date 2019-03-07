@@ -47,8 +47,8 @@
 ;;括号自动补齐
 ;;(require 'smartparens-config)    因为;;;###autoload会自动加载无需require
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
-(smartparens-global-mode t)
-
+;;(smartparens-global-mode t)
+(electric-pair-mode)
 
 ;;hungry-delete
 (require 'hungry-delete)
