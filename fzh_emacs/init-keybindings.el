@@ -77,5 +77,10 @@
 (global-set-key (kbd "C-h C-j a") 'bookmark-set)
 
 
+;;使用dired mode时,打开不同的目录都不会生成新的buff
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
+
 
 (provide 'init-keybindings)

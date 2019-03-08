@@ -141,5 +141,22 @@
        auto-mode-alist))
 
 
+;; always delete and copy recursively 递归删除或拷贝不询问
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+
+
+;;使用dired mode时,打开不同的目录都不会生成新的buff
+(put 'dired-find-alternate-file 'disabled nil)
+
+
+;;C-x C-j 打开当前目录的dired mode
+(require 'dired-x)
+
+
+;;当使用dired mode 打开复制元和复制先,使用复制会自动提示复制先目录
+(setq dired-dwim-target t)
+
+
 
 (provide 'init-ui)
