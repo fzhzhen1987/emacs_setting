@@ -34,6 +34,14 @@
 ;;括号配对显示 在after-init模式下使用show-paren
 (add-hook 'after-init-hook 'show-paren-mode)
 
+;;在括号中也显示括号头尾
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+        (t (save-excursion
+             (ignore-errors (backward-up-list))
+             (funcall fn)))))
+
 
 ;;删除选定 配合鼠标shift,标记后可以可替换
 (delete-selection-mode t)
@@ -156,6 +164,10 @@
 
 ;;当使用dired mode 打开复制元和复制先,使用复制会自动提示复制先目录
 (setq dired-dwim-target t)
+
+
+;;在elisp模式下'符号取消自动匹配
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 
 
