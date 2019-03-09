@@ -39,7 +39,7 @@
 ;;键位
 (global-set-key (kbd "C-<left>") 'backward-sexp)
 (global-set-key (kbd "C-<right>") 'forward-sexp)
-(global-set-key (kbd "M-n") 'mark-word)
+(global-set-key (kbd "M-n") 'er/expand-region)
 
 ;;高亮当前同样单词
 (global-set-key (kbd "C-h C-o") 'highlight-symbol-at-point)
@@ -93,6 +93,9 @@
   (define-key company-active-map (kbd "C-n") #'company-select-next)
   (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
+
+;;iedit实现多行同时编辑
+(global-set-key (kbd "C-h m") 'iedit-mode)
 
 
 (provide 'init-keybindings)

@@ -25,6 +25,9 @@
 		       counsel
 		       smartparens
 		       popwin
+		       expand-region
+		       wgrep-helm
+		       iedit
 		       )  "Default packages")
 
 ;;将package-selected-packages设置为我自己的列表package auto remove就不会删除我的包
