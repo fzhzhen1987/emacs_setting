@@ -62,6 +62,10 @@
 ;;C-w删除区域和C-k删除行整合到C-k
 (global-set-key (kbd "C-k") 'joseph-kill-region-or-line)
 
+;;向前删除一个单词
+(global-set-key (kbd "C-w") 'backward-kill-word)
+
+
 ;;注释代码
 (global-set-key "\M-;" 'fzh-comment-dwim-line)
 
@@ -80,6 +84,14 @@
 ;;使用dired mode时,打开不同的目录都不会生成新的buff
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
+
+;;company 使用C-n C-p上下选择
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 
 
