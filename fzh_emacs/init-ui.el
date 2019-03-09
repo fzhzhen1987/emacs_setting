@@ -170,5 +170,17 @@
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 
+;;在两种模式中禁用匹配符号
+(sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil)
+
+
+;;删除win下文件的末尾回车符号,使用remove-dos-eol
+(defun remove-dos-eol ()
+  "Replace DOS eolns CR LF with Unix eolns CR"
+  (interactive)
+  (goto-char (point-min));;跳转到行数的开头
+  (while (search-forward "\r" nil t) (replace-match "")));;循环查找\r结尾替换成空字符串
+
+
 
 (provide 'init-ui)
