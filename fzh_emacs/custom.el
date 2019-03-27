@@ -6,6 +6,8 @@
  '(company-idle-delay 0.08)
  '(company-minimum-prefix-length 1)
  '(helm-autoresize-max-height 20)
+ '(helm-follow-mode-persistent t)
+ '(helm-source-names-using-follow (quote ("Select Tag")))
  '(package-selected-packages (quote (company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
