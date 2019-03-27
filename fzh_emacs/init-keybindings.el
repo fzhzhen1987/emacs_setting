@@ -94,6 +94,13 @@
   (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 
+;;在helm-ag模式中加入wgrep模式，可是只能使用一次，第二次使用需要从M-x中查找
+;;所以加到全局变量中
+;;(with-eval-after-load 'helm-ag
+;;  (define-key helm-ag-mode-map (kbd "C-c C-p") 'wgrep-change-to-wgrep-mode))
+(global-set-key (kbd "C-c C-p ") 'wgrep-change-to-wgrep-mode) 
+
+
 ;;iedit实现多行同时编辑
 (global-set-key (kbd "C-h m") 'iedit-mode)
 
