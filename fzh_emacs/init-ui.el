@@ -56,6 +56,7 @@
 
 
 ;;将C-k和C-w功能整合到C-k
+;;当有选定区域会删除选定区域内容,否则删到行尾
 (defun joseph-kill-region-or-line(&optional arg)
   "this function is a wrapper of (kill-line).
   When called interactively with no active region, this function
