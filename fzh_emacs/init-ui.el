@@ -183,5 +183,9 @@
   (while (search-forward "\r" nil t) (replace-match "")));;循环查找\r结尾替换成空字符串
 
 
+;; 显示时间
+(display-time-mode 1)
+
+
 
 (provide 'init-ui)
