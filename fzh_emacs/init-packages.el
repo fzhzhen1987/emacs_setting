@@ -28,6 +28,7 @@
 		       expand-region
 		       wgrep-helm
 		       iedit
+		       powerline
 		       )  "Default packages")
 
 ;;将package-selected-packages设置为我自己的列表package auto remove就不会删除我的包
@@ -92,6 +93,12 @@
 
 ;;加载主题
 (load-theme 'monokai t)
+
+
+;;添加powerline
+(require 'powerline)
+(powerline-default-theme)
+
 
 
 ;;加载此文件需要的变量名
