@@ -11,6 +11,7 @@
 (require 'init-packages)
 (require 'init-ui)
 (require 'init-keybindings)
+(require 'init-org)
 
 (setq custom-file (expand-file-name "fzh_emacs/custom.el" user-emacs-directory))
 
