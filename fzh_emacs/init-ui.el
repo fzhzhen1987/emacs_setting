@@ -187,5 +187,9 @@
 (display-time-mode 1)
 
 
+;;取消换行自动缩进
+(electric-indent-mode -1)
+
+
 
 (provide 'init-ui)
