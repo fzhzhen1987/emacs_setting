@@ -28,7 +28,9 @@
 		       expand-region
 		       wgrep-helm
 		       iedit
-		       powerline
+		       doom-modeline
+		       doom-themes
+		       use-package
 		       )  "Default packages")
 
 ;;将package-selected-packages设置为我自己的列表package auto remove就不会删除我的包
@@ -96,9 +98,12 @@
 
 
 ;;添加powerline
-(require 'powerline)
-(powerline-default-theme)
-
+;(require 'powerline)
+;(powerline-default-theme)
+(require 'doom-modeline)
+(doom-modeline-mode 1)
+(require 'doom-themes)
+(load-theme 'doom-one t)
 
 
 ;;加载此文件需要的变量名

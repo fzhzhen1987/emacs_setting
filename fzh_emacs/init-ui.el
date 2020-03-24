@@ -125,6 +125,13 @@
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 
 
+;;Emacs-Lisp
+;; (defun my-Emacs_Lisp-mode-hook ()
+;;   (setq tab-width 4)
+;;   ;; (indent-tabs-mode t)
+;;   )
+;; (add-hook 'emacs-lisp-mode-hook 'my-Emacs_Lisp-mode-hook)
+
 ;;手动刷新buff
 (defun revert-buffer-no-confirm (&optional force-reverting)
   "Interactive call to revert-buffer. Ignoring the auto-save
@@ -188,7 +195,11 @@
 
 
 ;;取消换行自动缩进
-(electric-indent-mode -1)
+(electric-indent-mode t)
+
+
+;;去掉声音
+(setq visible-bell 0)
 
 
 
